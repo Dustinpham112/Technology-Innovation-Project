@@ -1,0 +1,76 @@
+/* Main content area
+   Mirrors .login-main but adds vertical padding so the taller
+   registration card doesn't feel cramped on small screens.*/
+.register-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  padding: 40px 20px;       /* Vertical padding for short viewports */
+  box-sizing: border-box;
+}
+ 
+/* Password strength bar wrapper
+   Sits below the password input; flex row with bar + label.*/
+.strength-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+ 
+/* Strength bar track
+   Four equal segments side by side; filled segments get a
+   colour class that depends on the current strength level.*/
+.strength-bar {
+  display: flex;
+  gap: 4px;
+  flex: 1; /* Takes up remaining width, leaving room for the label */
+}
+ 
+/* Individual bar segment — grey by default (unfilled) */
+.strength-segment {
+  height: 5px;
+  flex: 1;
+  border-radius: 4px;
+  background: #ddd;
+  transition: background 0.3s; /* Smooth colour change as user types */
+}
+ 
+/*Segment fill colours by strength level 
+   level-1 = Weak (red) → level-4 = Strong (green)*/
+.strength-segment.level-1 { background: #e53935; } /* Weak   — red    */
+.strength-segment.level-2 { background: #fb8c00; } /* Fair   — orange */
+.strength-segment.level-3 { background: #fdd835; } /* Good   — yellow */
+.strength-segment.level-4 { background: #43a047; } /* Strong — green  */
+ 
+/* ── Strength label text ("Weak", "Fair", "Good", "Strong") ─ */
+.strength-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  min-width: 40px; /* Prevents layout shift when label text changes length */
+}
+ 
+/* Label colour matches the filled bar colour at each level */
+.level-text-1 { color: #e53935; }
+.level-text-2 { color: #fb8c00; }
+.level-text-3 { color: #fdd835; }
+.level-text-4 { color: #43a047; }
+ 
+/*Inline field-level error
+   Shown directly below the confirm-password input when
+   the two password values don't match.*/
+.field-error {
+  font-size: 0.8rem;
+  color: #a30000; /* Brand red — same as sidebar and buttons */
+  margin: 5px 0 0;
+}
+ 
+/*Terms of Service row
+   Checkbox + label text + terms link before the submit button.*/
+.terms-row {
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+  color: #555;
+}
