@@ -7,16 +7,6 @@ COS30049 Computing Technology Innovation Project
 Semester Spring, 2026
 
 
-Phạm Đỗ Đạt - 104989653
-
-Nguyễn Thị Mai Nguyên - 104979418
-
-Lê Ngọc Triều Dương - 105709988
-
-Dương Thoại Như - 105011463
-
-Trần Ngô Anh Khôi - 105683710
-
 # Overview
 
 This project makes a full-stack web app that uses machine learning models to find spam messages and malware. Users can enter text or data through a web interface and get predictions in real time.
