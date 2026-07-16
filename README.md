@@ -1,4 +1,4 @@
-# Spam or Malware Detection
+# Spam and Malware Detection
 
 Swinburne University of Technology
 
